@@ -61,7 +61,7 @@ app.post("/contact", async (req, res) => {
 });
 
 app.post("/contact1", async (req, res) => {
-  const { name1, email1, phone1, service1, message1 } = req.body;
+  const { company1, name1, email1, phone1, service1, message1 } = req.body;
 
   let transporter = nodemailer.createTransport({
     host: "smtpout.secureserver.net",
@@ -86,6 +86,7 @@ app.post("/contact1", async (req, res) => {
     subject: "Contact Form",
     text: `
         <div>
+            <div>Company: ${company1}</div>
             <div>Name: ${name1}</div>
             <div>Email: ${email1}</div>
             <div>Phone: ${phone1}</div>
@@ -95,6 +96,7 @@ app.post("/contact1", async (req, res) => {
     `,
     html: `
     <div>
+    <div>Company: ${company1}</div>
     <div>Name: ${name1}</div>
     <div>Email: ${email1}</div>
     <div>Phone: ${phone1}</div>
@@ -108,7 +110,7 @@ app.post("/contact1", async (req, res) => {
 });
 
 app.post("/contact2", async (req, res) => {
-  const { name2,phone2 ,email2, message2 } = req.body;
+  const { name2, phone2, email2, message2 } = req.body;
 
   let transporter = nodemailer.createTransport({
     host: "smtpout.secureserver.net",
@@ -151,8 +153,6 @@ app.post("/contact2", async (req, res) => {
 
   res.json({ success: true, message: "Email Sent successfully" });
 });
-
-
 
 app.listen(PORT, () => {
   console.log("server is runing on port", PORT);
