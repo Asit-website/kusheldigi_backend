@@ -149,9 +149,7 @@ app.post("/contact2", async (req, res) => {
     },
   });
 
-  // const htmlToSend = template(replacements);
-
-  // send mail with defined transport object
+  
   let info2 = await transporter.sendMail({
     from: '"Kushel Digi Solutions" <info@kusheldigi.com>',
     to: "info@kusheldigi.com",
