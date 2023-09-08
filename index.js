@@ -4,13 +4,23 @@ const PORT = process.env.PORT || 5000;
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const fs = require("fs");
+const path = require("path");
 app.use(cors());
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("hlw");
+
+
+app.get("*/",function(req,res){
+  res.sendFile(
+    path.join(__dirname, "C:/Users/Asit Mandal/Desktopk/kushel_digi/public/index.html"),
+   function (err) {
+   if (err) {
+    res.status(500).send(err);
+   }
+   }
+   )
 });
 
 app.post("/contact", async (req, res) => {
@@ -31,12 +41,11 @@ app.post("/contact", async (req, res) => {
   });
 
   // const htmlToSend = template(replacements);
-
   // send mail with defined transport object
   let info = await transporter.sendMail({
     from: '"Kushel Digi Solutions" <info@kusheldigi.com>',
     to: "info@kusheldigi.com",
-    subject: "Contact Form",
+    subject: "Kushel digi solution Contact Form",
     text: `
         <div>
             <div>Name: ${name}</div>
