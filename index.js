@@ -10,7 +10,9 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-
+app.get("/abouut",(req,res)=>{
+    res.send("hello world");
+});
 
 app.get("*/", function (req, res) {
   res.sendFile(
