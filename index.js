@@ -34,7 +34,7 @@ app.post("/contact", async (req, res) => {
     secure: true, // true for 465, false for other ports
     auth: {
       user: "info@kusheldigi.com",
-      pass: "KDS@info@3421",
+      pass: "Kds@info2024",
     },
     from: "info@kusheldigi.com",
     tls: {
@@ -103,7 +103,7 @@ app.post("/contact1", async (req, res) => {
     secure: true, // true for 465, false for other ports
     auth: {
       user: "info@kusheldigi.com",
-      pass: "KDS@info@3421",
+      pass: "Kds@info2024",
     },
     from: "info@kusheldigi.com",
     tls: {
@@ -150,7 +150,7 @@ app.post("/contact2", async (req, res) => {
     secure: true, // true for 465, false for other ports
     auth: {
       user: "info@kusheldigi.com",
-      pass: "KDS@info@3421",
+      pass: "Kds@info2024",
     },
     from: "info@kusheldigi.com",
     tls: {
@@ -215,7 +215,7 @@ app.post("/contact3", async (req, res) => {
     secure: true, // true for 465, false for other ports
     auth: {
       user: "info@kusheldigi.com",
-      pass: "KDS@info@3421",
+      pass: "Kds@info2024",
     },
     from: "info@kusheldigi.com",
     tls: {
