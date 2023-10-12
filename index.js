@@ -29,12 +29,12 @@ app.post("/contact", async (req, res) => {
   const { name, email, phone, service, message } = req.body;
 
   let transporter = nodemailer.createTransport({
-    host: "smtpout.secureserver.net",
+    host: "mail.kusheldigi.com",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
       user: "info@kusheldigi.com",
-      pass: "Kds@info2024",
+      pass: "kusheldigisolutions@2024",
     },
     from: "info@kusheldigi.com",
     tls: {
@@ -98,12 +98,12 @@ app.post("/contact1", async (req, res) => {
   const { company1, name1, email1, phone1, service1, message1 } = req.body;
 
   let transporter = nodemailer.createTransport({
-    host: "smtpout.secureserver.net",
+    host: "mail.kusheldigi.com",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
       user: "info@kusheldigi.com",
-      pass: "Kds@info2024",
+      pass: "kusheldigisolutions@2024",
     },
     from: "info@kusheldigi.com",
     tls: {
@@ -145,12 +145,12 @@ app.post("/contact2", async (req, res) => {
   const { name2, phone2, email2, message2 } = req.body;
 
   let transporter = nodemailer.createTransport({
-    host: "smtpout.secureserver.net",
+    host: "mail.kusheldigi.com",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
       user: "info@kusheldigi.com",
-      pass: "Kds@info2024",
+      pass: "kusheldigisolutions@2024",
     },
     from: "info@kusheldigi.com",
     tls: {
@@ -210,12 +210,12 @@ app.post("/contact3", async (req, res) => {
   const { name4, email4, requirement4 } = req.body;
 
   let transporter = nodemailer.createTransport({
-    host: "smtpout.secureserver.net",
+    host: "mail.kusheldigi.com",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
       user: "info@kusheldigi.com",
-      pass: "Kds@info2024",
+      pass: "kusheldigisolutions@2024",
     },
     from: "info@kusheldigi.com",
     tls: {
@@ -243,7 +243,7 @@ app.post("/contact3", async (req, res) => {
 </div>
         `,
   });
-
+  
   res.json({ success: true, message: "Email Sent successfully" });
 });
 
